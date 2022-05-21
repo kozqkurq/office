@@ -14,5 +14,11 @@ ws.append([1, 2, 3])
 import datetime
 ws['A2'] = datetime.datetime.now()
 
+
+
+ws2 = wb.create_sheet("increment")
+for y in range(0, 10):
+        ws2.append([x+y*10 for x in range(1, 11)])
+
 # Save the file
 wb.save("sample.xlsx")
